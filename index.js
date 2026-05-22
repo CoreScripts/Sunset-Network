@@ -16,43 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 app.use(cors());
 
-// MIDDLEWARE TO REMOVE IFRAME-BLOCKING HEADERS
-app.use((req, res, next) => {
-    // Store original header functions
-    const originalSetHeader = res.setHeader;
-    const originalWriteHead = res.writeHead;
-    
-    // Override setHeader to filter out frame-blocking headers
-    res.setHeader = function(name, value) {
-        const lowerName = name.toLowerCase();
-        // Skip any frame-blocking headers
-        if (lowerName === 'x-frame-options') {
-            return; // Don't set this header
-        }
-        if (lowerName === 'content-security-policy' && value && value.includes('frame-ancestors')) {
-            return; // Don't set CSP frame-ancestors
-        }
-        return originalSetHeader.call(this, name, value);
-    };
-    
-    // Override writeHead to remove frame-blocking headers from existing headers object
-    res.writeHead = function(statusCode, statusMessage, headers) {
-        if (headers) {
-            delete headers['X-Frame-Options'];
-            if (headers['Content-Security-Policy']) {
-                headers['Content-Security-Policy'] = headers['Content-Security-Policy']
-                    .replace(/frame-ancestors[^;]+;?/g, '')
-                    .trim();
-                if (!headers['Content-Security-Policy']) {
-                    delete headers['Content-Security-Policy'];
-                }
-            }
-        }
-        return originalWriteHead.call(this, statusCode, statusMessage, headers);
-    };
-    
-    next();
-});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(process.cwd(), '/public/index.html'));
