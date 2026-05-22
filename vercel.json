@@ -8,15 +8,10 @@
     ],
     "routes": [
         {
-            "src": "/bare/(.*)",
-            "dest": "/index.js"
+            "handle": "filesystem"
         },
         {
-            "src": "/uv/(.*)",
-            "dest": "/index.js"
-        },
-        {
-            "src": "/(.*)",
+            "src": "/.*",
             "dest": "/index.js"
         }
     ]
