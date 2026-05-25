@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+    ADS REMOVAL NOTICE:
+    - Removed arc.io widget (async src="https://arc.io/widget.min.js#KpYQhCTB")
+    - Removed Google Analytics (gtag.js and related code)
+    - Removed any other tracking/ad scripts
+    - All advertisement/tracking elements have been completely eliminated
+-->
+
+<!-- Font Awesome (kept for icons, no ads) -->
 <script src="https://kit.fontawesome.com/52676eb1e5.js" crossorigin="anonymous"></script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunset Network | Home</title>
+    <title>Homo Network | Home</title>
     <script src="/lf.js"></script>
     <link rel="shortcut icon" type="x-icon" href="Icons/logo.png">
-    <script async src="https://arc.io/widget.min.js#KpYQhCTB"></script>
+    <!-- REMOVED: arc.io widget script -->
     <link href="/style.css" rel="stylesheet" type="text/css">
     <script src="settings.js" defer></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWD8SS29YZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-PWD8SS29YZ');
-    </script>
+    <!-- REMOVED: Google Analytics (gtag.js and all tracking code) -->
     
-   VYDVKS2358 
+    <!-- The mysterious "VYDVKS2358" text is preserved as-is -->
+    VYDVKS2358 
+</head>
 
 <body class="home">
 
     <div class="navbar">
-        <img src="Icons/logo.png" alt="Sunset Logo " id="logo">
+        <img src="Icons/logo.png" alt="Sunset Logo" id="logo">
         <a href="/index.html"><i class="fa-solid fa-house fa-2xl">&nbsp;</i>Home</a>
         <a href="/games.html"><i class="fa-solid fa-gamepad fa-2xl">&nbsp;</i>Apps</a>
         <a href="/discord.html"><i class="fa-brands fa-discord fa-2xl">&nbsp;</i>Discord</a>
@@ -36,7 +39,7 @@
     </div>
 
     <div class="adfixe">
-        <h1 class="pname">Sunset Network</h1>
+        <h1 class="pname">Homo Unblockerk</h1>
 
         <form class="hvr-bounce-in" id="uv-form">
             <input class="hvr-bounce-in" id="uv-search-engine" value="https://www.google.com/search?q=%s"
@@ -45,19 +48,21 @@
         </form>
 
         <p class="abttxt">
-            Experience the future of internet browsing with Sunset Network your secure and private web proxy
+            Experience the future of internet browsing with Homo Network your secure and private web proxy
             solution.
             <br> With advanced encryption, ad blocking, and lightning-fast speeds, browse the web with
             confidence
             and
-            ease. <br> Try Sunset Network today for a seamless online experience like never before!
+            ease. <br> Try Homo Unblocker today for a seamless online experience like never before!
         </p>
 
+        <!-- REMOVED: Affiliate/ad image link 
         <div class="center">
             <a href="https://billing.billigerhost.com/aff.php?aff=84"> 
                 <img src="/Icons/IMG_3175.gif">
             </a>
         </div>
+        -->
 
         <div class="SNdiscordlayout">
             <p class="SNdiscinv">
@@ -68,6 +73,7 @@
         </div>
     </div>
 
+    <!-- Proxy scripts (kept for functionality) -->
     <script src="uv/uv.bundle.js" defer></script>
     <script src="uv/uv.config.js" defer></script>
     <script src="/index.js" defer></script>
@@ -75,6 +81,90 @@
     <script>
         __uv$config.sw;
     </script>
+
+    <!-- ============================================================ -->
+    <!-- INFORMATION SECTION (not visible, for documentation purposes) -->
+    <!-- ============================================================ -->
+    <div style="display: none;">
+        <h2>About crossorigin="anonymous"</h2>
+        <p>
+            <strong>crossorigin="anonymous"</strong> is an HTML attribute used with &lt;script&gt;, &lt;link&gt;, 
+            &lt;img&gt;, and other elements that fetch external resources.
+        </p>
+        <p>
+            <strong>What it does:</strong><br>
+            - It makes the browser send a CORS (Cross-Origin Resource Sharing) request to the server.<br>
+            - The request is sent without credentials (cookies, HTTP auth, client-side SSL certs).<br>
+            - If the server responds with the header <code>Access-Control-Allow-Origin: *</code> (or your origin),
+            the resource is loaded. If not, the request fails.
+        </p>
+        <p>
+            <strong>Why it's used:</strong><br>
+            - To enable CORS features like reading responses from a different origin via JavaScript (e.g., fetching fonts, canvas data).<br>
+            - For security: prevents leaking user data to malicious cross-origin scripts.<br>
+            - For integrity checking (SRI - Subresource Integrity).
+        </p>
+        <p>
+            <strong>When to use it:</strong><br>
+            - When you need to access the resource programmatically (e.g., reading an image's pixel data in canvas, loading a font via CSS).<br>
+            - When a CDN requires CORS for proper integration.<br>
+            - For scripts/libraries that need to know they're loaded from a secure context.
+        </p>
+        <p>
+            <strong>What it does NOT do:</strong><br>
+            - It doesn't block the resource from loading normally (unless CORS fails AND the browser enforces it).<br>
+            - It doesn't make the request "anonymous" (the server still sees your IP).<br>
+            - It doesn't remove ads or tracking.
+        </p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- IFRAME PROXY GUIDE (not visible, for your reference) -->
+    <!-- ============================================================ -->
+    <div style="display: none;">
+        <h2>How to iframe your proxy</h2>
+        <p>
+            <strong>Method 1: Direct iframe with proxy URL</strong><br>
+            <code>&lt;iframe src="https://your-proxy-server.com/browse?url=https://example.com" width="100%" height="600"&gt;&lt;/iframe&gt;</code>
+        </p>
+        <p>
+            <strong>Method 2: Using your UV proxy (Ultraviolet) with iframe</strong><br>
+            Since your site already uses UV proxy, you can embed any site in an iframe like this:<br>
+            <code>&lt;iframe src="/uv/service/hvtrs8%2D%2Dhttps%3A%2F%2Fexample.com/" width="100%" height="600"&gt;&lt;/iframe&gt;</code><br>
+            (Note: The URL needs to be properly encoded with UV's encoding scheme)
+        </p>
+        <p>
+            <strong>Method 3: Dynamic iframe with form input</strong><br>
+            <pre>
+&lt;input type="text" id="urlInput" placeholder="Enter URL"&gt;
+&lt;button onclick="loadInIframe()"&gt;Go&lt;/button&gt;
+&lt;iframe id="proxyFrame" src="about:blank" width="100%" height="600"&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+function loadInIframe() {
+    const url = document.getElementById('urlInput').value;
+    const proxyPrefix = '/uv/service/';
+    const encodedUrl = encodeURIComponent(url);
+    const proxyUrl = proxyPrefix + encodedUrl;
+    document.getElementById('proxyFrame').src = proxyUrl;
+}
+&lt;/script&gt;
+            </pre>
+        </p>
+        <p>
+            <strong>Important notes for iframe proxying:</strong><br>
+            - Many websites block being loaded in iframes using X-Frame-Options or CSP headers.<br>
+            - Using a proxy like UV that rewrites URLs helps bypass these restrictions.<br>
+            - Some sites may still break due to complex JavaScript or CORS issues.<br>
+            - For best results, load the proxy URL directly (like your form does), not an iframe of a proxied site.<br>
+            - Your existing form already does proxying — it redirects the main page, which works better than iframes for most sites.
+        </p>
+        <p>
+            <strong>Quick iframe example you can use:</strong><br>
+            <code>&lt;iframe src="/uv/service/hvtrs8%2D%2Dhttps%3A%2F%2Fwww.google.com/" width="100%" height="500"&gt;&lt;/iframe&gt;</code><br>
+            This would display Google through your UV proxy inside an iframe.
+        </p>
+    </div>
 </body>
 
-</html
+</html>
